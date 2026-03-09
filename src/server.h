@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <chrono>
 #include <vector>
+#include <string>
 #include <sys/epoll.h>
 #include "protocol.h"
 

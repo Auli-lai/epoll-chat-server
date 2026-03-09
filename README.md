@@ -3,7 +3,6 @@
 A simple, high-performance TCP chat server using Linux `epoll` in **Edge-Triggered (ET)** mode.  
 Designed for learning network programming and I/O multiplexing — clean, minimal, and beginner-friendly.
 
-
 ## ✨ Features
 
 - **Length-prefixed binary protocol** to handle TCP packet sticking and splitting
@@ -16,32 +15,22 @@ Designed for learning network programming and I/O multiplexing — clean, minima
 
 ### Prerequisites
 - Linux or macOS (Windows requires WSL)
-- g++ (≥7.0) or clang++ with C++17 support
+- CMake (≥ 3.10)
+- g++ (≥ 7.0) or clang++ with C++17 support
 
-### Option 1: Quick Copy-Paste (for testing)
-Simply copy the code from [`text.cpp`](text.cpp) and compile locally.
-
-
-Method 2:
-Run the following instructions:
 ### Build & Run
+
 ```bash
-# Clone the repo
+# 1. Clone the repository
 git clone https://github.com/Auli-lai/epoll-chat-server.git
 cd epoll-chat-server
 
-# Compile
-g++ -std=c++17 -O2 -o server server.cpp
+# 2. Create a build directory and configure with CMake
+mkdir build && cd build
+cmake ..
 
-# Run
-./server
-```
-# Configuration
+# 3. Compile the server
+make
 
--The default port for this epoll server is 8080
--Default communication uses the IPv4 protocol
--Default listen to all local interfaces
-
-
-## 📄 License
-This project is licensed under the [MIT License](LICENSE).
+# 4. Run the server (default port 8080)
+./epoll_chat_server
